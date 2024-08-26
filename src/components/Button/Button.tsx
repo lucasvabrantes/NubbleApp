@@ -1,8 +1,8 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
 import {Text} from '../Text/Text';
 import {useTheme} from '@shopify/restyle';
 import {Theme} from '../../theme/theme';
+import {TouchableOpacityBox} from '../Box/Box';
 
 interface ButtonProps {
   title: string;
@@ -11,18 +11,16 @@ interface ButtonProps {
 export function Button({title}: ButtonProps) {
   const {colors} = useTheme<Theme>();
   return (
-    <TouchableOpacity
-      style={{
-        paddingHorizontal: 20,
-        backgroundColor: '#074C4E',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 16,
-        height: 50,
-      }}>
+    <TouchableOpacityBox
+      backgroundColor="buttonPrimary"
+      paddingHorizontal="s20"
+      height={50}
+      alignItems="center"
+      justifyContent="center"
+      borderRadius="s16">
       <Text preset="paragraphMedium" bold style={{color: 'white'}}>
         {title}
       </Text>
-    </TouchableOpacity>
+    </TouchableOpacityBox>
   );
 }

@@ -14,7 +14,7 @@ function App(): React.JSX.Element {
           <Text italic bold preset="headingLarge">
             Lucas Abrantes
           </Text>
-          <Button title="Entrar"></Button>
+          <Button title="Login"></Button>
         </View>
       </SafeAreaView>
     </ThemeProvider>
